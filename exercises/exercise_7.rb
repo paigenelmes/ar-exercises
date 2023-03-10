@@ -8,5 +8,8 @@ require_relative './exercise_6'
 
 puts "Exercise 7"
 puts "----------"
-
-# Your code goes here ...
+puts "What is the name of your store?"
+new_store_name = gets.chomp
+@newStore = Store.create(name: new_store_name)
+@newStore.valid?
+puts @newStore.errors.full_messages
